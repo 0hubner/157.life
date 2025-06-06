@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: #f4f4f4ce;
+    position: relative;
+    cursor: url('cursor.png'), auto; /* Aplica o cursor personalizado */
+}
+
+#contador, #qleek, #purchase, #developing, #contact, #discord, #user1, #user2, #by {
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+    user-select: none; /* Impede a seleção do texto */
+}
+
+#purchase {
+    transition: opacity 0.3s ease;
+    cursor: wait; /* Define o cursor como "Not Allowed" */
+}
+
+img {
+    user-select: none;
+}
+
+#contador:hover, #cyber:hover,  #qleek:hover, #purchase:hover, #developing:hover, #contact:hover, #discord:hover, #user1:hover, #user2:hover, #by:hover {
+    opacity: 0.5; /* Define a opacidade para 50% ao passar o mouse */
+}
+
+img {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Coloca no canto superior esquerdo */
+    margin-left: 20px; /* Pequena margem da esquerda */
+}
+
+#contador {
+    position: absolute;
+    top: 70px; /* Logo abaixo do GIF */
+    left: 10px; /* Coloca o contador abaixo do GIF à esquerda */
+    margin-left: 15px; /* Margem adicional da esquerda */
+    font-size: 15px;
+    font-weight: normal;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #525151f8;
+}
+
+#qleek, #purchase, #developing, #contact, #discord, #cyber, #user1, #user2, #by {
+    position: absolute;
+    left: 10px; /* Alinha todos os textos à esquerda */
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #525151f8;
+}
+
+#user1 {
+    position: absolute;
+    left: 10px; /* Alinha todos os textos à esquerda */
+    margin-left: 35px;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #7015e6f8;
+    cursor: pointer;
+}
+
+#user2 {
+    position: absolute;
+    left: 10px; /* Alinha todos os textos à esquerda */
+    margin-left: 35px;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #fd0c0cf8;
+    cursor: pointer;
+}
+
+/* Define a posição de cada texto */
+#qleek { top: 140px; }
+#purchase { top: 165px; }
+#developing { top: 190px; }
+#cyber  { top: 215px; }
+#contact { top: 275px; }
+#discord { top: 300px; } 
+#by { top: 360px; }
+#user1 { top: 385px; } 
+#user2 { top: 405px; } 
+
+.icon {
+    position: absolute;
+    left: 10px; /* Alinha todos os textos à esquerda */
+    margin-left: -25px;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: Tahoma, Verdana, sans-serif;
+    top: 2px;
+}

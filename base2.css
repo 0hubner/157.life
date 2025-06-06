@@ -1,0 +1,508 @@
+/* Font Faces */
+@font-face {
+    font-family: SFPro;
+    src: url('https://raw.githubusercontent.com/zhovner/magic-setup-assistant/master/app/fonts/sanfranciscodisplay-regular-webfont.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: SFPro2;
+    src: url(../fonts/SF-Pro.ttf) format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-Italic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-LightItalic.ttf) format("truetype");
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-MediumItalic.ttf) format("truetype");
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-SemiBoldItalic.ttf) format("truetype");
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-Thin.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-ThinItalic.ttf) format("truetype");
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-ExtraLight.ttf) format("truetype");
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: IBMPlexMono;
+    src: url(../fonts/IBMPlexMono-ExtraLightItalic.ttf) format("truetype");
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  /* Global Styles */
+  body {
+    margin: 0;
+    font-family: SFPro, SFPro2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fff;
+    letter-spacing: 0;
+    font-size: 12px;
+  }
+  
+  h1 {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: SFPro;
+    letter-spacing: 0;
+  }
+  
+  /* Cursors */
+  .circle-cursor {
+    cursor: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4=), auto;
+  }
+  
+  /* Layout Containers */
+  .container {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    overflow-y: hidden;
+  }
+  
+  .content-container {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 4rem;
+  }
+  
+  .content {
+    padding: 0.5rem 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .top-section {
+    display: none;
+  }
+  
+  .tap-for-sound {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    bottom: -0.9rem;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Titles */
+  .title-mobile {
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    left: 1.2rem;
+    opacity: 1;
+    transform: translate(0);
+    transition: transform 1s ease-in-out, opacity 0s ease-in-out;
+  }
+  
+  .title-mobile-back {
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    padding: 35px 20px 0 0;
+  }
+  
+  .title-mobile-back:focus,
+  .title-mobile-back:active,
+  .title-mobile-back:focus-visible,
+  .title-mobile-back:hover {
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    outline-offset: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+  }
+  
+  .title-desktop {
+    position: fixed;
+    bottom: 2rem;
+    margin-bottom: -1rem;
+  }
+  
+  .title-desktop-back {
+    margin-bottom: -1rem;
+    position: fixed;
+    bottom: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 640px) {
+    .page-time {
+      display: block;
+    }
+  
+    .container {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: hidden;
+    }
+  
+    .content {
+      flex-direction: row;
+      height: 100%;
+    }
+  
+    .title-mobile,
+    .title-mobile.show,
+    .title-mobile-back.show {
+      display: none;
+    }
+  
+    .top-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: auto;
+      padding-left: 0.5rem;
+      padding-bottom: 1.18rem;
+    }
+  
+    .time-mobile {
+      display: none;
+    }
+  
+    .time {
+      padding-top: 1.25rem;
+    }
+  
+
+  
+    .homepage-video {
+      height: 600px;
+      width: auto;
+    }
+  }
+  
+  /* Image and Video Containers */
+  .homepage-video-container {
+    position: relative;
+    margin-bottom: 0.5rem;
+    margin-top: 9rem;
+    width: 100%;
+  }
+  
+  .content-video-container {
+    position: relative;
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .content-video-container.visible {
+    opacity: 1;
+  }
+  
+  .homepage-video {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+  
+  .homepage-image {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .content-image,
+  .content-video {
+    width: 100%;
+    height: 225px;
+    margin-bottom: 0;
+  }
+  
+  .content-images {
+    height: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 28px;
+    margin-bottom: 8rem;
+    position: absolute;
+    bottom: 0;
+    top: 10.85rem;
+    left: 0;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  
+  .content-images--home {
+    height: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 28px;
+    margin-bottom: 8rem;
+    position: absolute;
+    bottom: 0;
+    top: 10.85rem;
+    left: 0;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    transform: translate(150vw);
+    transition: transform 1s ease-in-out, opacity 0s ease-in-out;
+  }
+  
+  .content-images--home.show {
+    transform: translate(0);
+  }
+  
+  .image-links {
+    position: absolute;
+    bottom: 0;
+    top: 10.85rem;
+    left: 0;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .image-links-info {
+    position: absolute;
+    bottom: 0;
+    top: 10.85rem;
+    left: 0;
+    padding-left: 1.2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+    transform: translate(100vw);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+  }
+  
+  .image-links-info.show {
+    transform: translate(0);
+    opacity: 1;
+  }
+  
+  /* Text and Buttons */
+  .container--clothing {
+    position: absolute;
+    font-family: IBMPlexMono !important;
+    max-width: 600px;
+    font-size: 13px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.2;
+    top: 20rem;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(-150vw);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+    padding-left: 0.7rem;
+  }
+  
+  .container-home--clothing {
+    display: none;
+    position: absolute;
+    font-family: SFPro !important;
+    max-width: 600px;
+    font-size: 13px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.2;
+    top: 8rem;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    opacity: 1;
+    padding-left: 0.7rem;
+  }
+  
+  .container-home--clothing.show,
+  .container--clothing.visible,
+  .back-btn.visible {
+    transform: translate(0);
+    opacity: 1;
+  }
+  
+  .container--clothing.hidden,
+  .back-btn.hidden {
+    opacity: 0;
+  }
+  
+
+  
+  #form-message {
+    text-transform: uppercase;
+    text-align: left;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
+  
+  .form-submit {
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    -webkit-text-size-adjust: unset;
+  }
+  
+  .space-lines {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* Accessibility */
+  *:focus-visible {
+    outline: none !important;
+    outline-offset: none !important;
+    box-shadow: none !important;
+  }
+  
+  input:-internal-autofill-selected {
+    background-color: #fff !important;
+  }
+  
+
+
+  .policies-home {
+    position: absolute;
+    font-family: IBMPlexMono !important;
+    max-width: 600px;
+    font-size: 13px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    word-break: break-word;
+    opacity: 0;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    transform: translate(100vw);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  
+  .policies-home.show {
+    transform: translate(0);
+    opacity: 1;
+  }
+  
+  .policies-home > .rte h4,
+  .policy-content > .rte h4,
+  .policies-home > .rte h1,
+  .policy-content > .rte h1 {
+    margin-bottom: -8px;
+    letter-spacing: 0;
+  }
+  
+  .content-images div:nth-last-child(-n+4) .tap-for-sound {
+    bottom: -2.9rem;
+  }
+  
+  #content-images .content-video-container {
+    display: none;
+    transform: translate(100vw);
+    transition: transform 1s ease-in-out, opacity 0s ease-in-out;
+  }
+  
+  #content-images .content-video-container.active {
+    transform: translate(0);
+  }
+  
+  .tap-for-sound div:first-child {
+    padding-left: 4rem;
+    height: 20px;
+  }
+  
